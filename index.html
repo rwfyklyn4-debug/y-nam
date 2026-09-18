@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#092f35">
+  <meta name="description" content="خدمات تنظيف منازل ومجالس ومكيفات وخزانات في جدة بجودة عالية وأسعار مناسبة.">
+  <title>نقاء جدة | خدمات تنظيف احترافية</title>
+  <style>
+    :root {
+      --ink: #12343a;
+      --muted: #668083;
+      --teal: #0d7375;
+      --teal-dark: #082e35;
+      --mint: #ddf5ef;
+      --cream: #fffaf1;
+      --gold: #f4b746;
+      --white: #ffffff;
+      --line: rgba(18, 52, 58, .1);
+      --shadow: 0 22px 60px rgba(8, 46, 53, .14);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 8%, rgba(190, 235, 221, .7), transparent 24rem),
+        radial-gradient(circle at 95% 44%, rgba(244, 183, 70, .12), transparent 23rem),
+        var(--cream);
+      font-family: Tahoma, "Arial", sans-serif;
+      line-height: 1.75;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .page {
+      width: min(1120px, calc(100% - 30px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 0 12px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 900;
+      letter-spacing: -.5px;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 45px;
+      height: 45px;
+      color: var(--white);
+      background: var(--teal);
+      border-radius: 15px 15px 15px 4px;
+      box-shadow: 0 8px 17px rgba(13, 115, 117, .26);
+      font-size: 22px;
+    }
+
+    .brand-text { line-height: 1.15; }
+    .brand-text small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .4px;
+    }
+
+    .top-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .top-link span {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      color: var(--white);
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      align-items: center;
+      min-height: 550px;
+      overflow: hidden;
+      margin-top: 16px;
+      padding: clamp(28px, 5vw, 65px);
+      border-radius: 36px;
+      color: var(--white);
+      background: linear-gradient(135deg, #0b3038 0%, #0b555a 63%, #148283 100%);
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+
+    .hero::before {
+      position: absolute;
+      content: "";
+      width: 430px;
+      height: 430px;
+      top: -230px;
+      left: -130px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50%;
+      box-shadow: 0 0 0 28px rgba(255,255,255,.025), 0 0 0 58px rgba(255,255,255,.025);
+      z-index: -1;
+    }
+
+    .hero-copy {
+      text-align: center;
+      max-width: 530px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 17px;
+      padding: 7px 13px;
+      color: #d9fff4;
+      border: 1px solid rgba(217, 255, 244, .22);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .eyebrow::before {
+      content: "✦";
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      margin-bottom: 16px;
+      font-size: clamp(35px, 5vw, 62px);
+      line-height: 1.15;
+      letter-spacing: -2px;
+    }
+
+    .hero-copy > p {
+      max-width: 475px;
+      margin: 0 auto 25px;
+      color: rgba(255,255,255,.82);
+      font-size: 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 51px;
+      padding: 12px 21px;
+      border: 0;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-3px); }
+    .btn-primary {
+      color: var(--ink);
+      background: var(--gold);
+      box-shadow: 0 10px 24px rgba(244, 183, 70, .24);
+    }
+    .btn-light { color: var(--teal-dark); background: var(--white); }
+    .btn-outline {
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.09);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 360px;
+    }
+
+    .hero-visual::before {
+      position: absolute;
+      content: "";
+      width: 310px;
+      height: 310px;
+      border-radius: 50%;
+      background: rgba(244, 183, 70, .14);
+    }
+
+    .hero-image {
+      position: relative;
+      width: min(100%, 390px);
+      height: 390px;
+      object-fit: cover;
+      object-position: center;
+      clip-path: polygon(50% 0%, 94% 25%, 94% 74%, 50% 100%, 6% 74%, 6% 25%);
+      filter: saturate(.92) contrast(1.02);
+      border: 6px solid rgba(255,255,255,.18);
+    }
+
+    .visual-tag {
+      position: absolute;
+      right: 2%;
+      bottom: 13%;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 13px;
+      color: var(--ink);
+      background: var(--white);
+      border-radius: 14px;
+      box-shadow: 0 13px 28px rgba(0,0,0,.18);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .visual-tag b {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      color: var(--white);
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 18px 0 78px;
+    }
+
+    .trust-card {
+      padding: 19px 12px;
+      text-align: center;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.7);
+    }
+
+    .trust-card strong {
+      display: block;
+      color: var(--teal);
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .trust-card span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .section {
+      margin-bottom: 84px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      margin-bottom: 8px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .section h2 {
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .section-intro {
+      max-width: 580px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 13px;
+      text-align: center;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      padding: 26px 16px 22px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--white);
+      box-shadow: 0 8px 26px rgba(18,52,58,.05);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 32px rgba(18,52,58,.11);
+    }
+
+    .service-card::after {
+      position: absolute;
+      content: "";
+      width: 65px;
+      height: 65px;
+      left: -25px;
+      bottom: -30px;
+      background: var(--mint);
+      border-radius: 50%;
+    }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 14px;
+      color: var(--teal);
+      background: var(--mint);
+      border-radius: 17px;
+      font-size: 26px;
+    }
+
+    .service-card h3 { margin-bottom: 5px; font-size: 16px; }
+    .service-card p { margin: 0; color: var(--muted); font-size: 12px; }
+
+    .features-wrap {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 40px;
+      align-items: center;
+      padding: clamp(24px, 4vw, 48px);
+      text-align: right;
+      border-radius: 30px;
+      background: #e9f7f0;
+    }
+
+    .features-copy { text-align: center; }
+    .features-copy h2 { margin-bottom: 12px; }
+    .features-copy p { color: var(--muted); font-size: 14px; }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 14px;
+      border: 1px solid rgba(13,115,117,.1);
+      border-radius: 16px;
+      background: rgba(255,255,255,.76);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      color: var(--white);
+      background: var(--teal);
+      border-radius: 50%;
+      font-size: 12px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      text-align: right;
+    }
+
+    .review-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--white);
+      box-shadow: 0 8px 26px rgba(18,52,58,.05);
+    }
+
+    .stars { color: var(--gold); letter-spacing: 2px; font-size: 17px; }
+    .review-card p {
+      min-height: 82px;
+      margin: 10px 0 17px;
+      color: #48676a;
+      font-size: 13px;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .avatar {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      color: var(--teal);
+      background: var(--mint);
+      border-radius: 50%;
+    }
+
+    .cta {
+      position: relative;
+      overflow: hidden;
+      padding: 44px 25px;
+      color: var(--white);
+      border-radius: 30px;
+      background: linear-gradient(120deg, var(--teal-dark), var(--teal));
+      text-align: center;
+    }
+
+    .cta::after {
+      position: absolute;
+      content: "✦";
+      left: 7%;
+      bottom: -18px;
+      color: rgba(244,183,70,.45);
+      font-size: 120px;
+      transform: rotate(20deg);
+    }
+
+    .cta h2 { position: relative; z-index: 1; margin-bottom: 8px; color: var(--white); }
+    .cta p { position: relative; z-index: 1; margin-bottom: 22px; color: rgba(255,255,255,.77); font-size: 14px; }
+    .cta .hero-actions { position: relative; z-index: 1; }
+
+    footer {
+      padding: 26px 0 34px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    footer a { color: var(--teal); font-weight: 900; }
+    .designer { margin-top: 6px; }
+
+    .floating-actions {
+      position: fixed;
+      left: 17px;
+      bottom: 18px;
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .float-btn {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      color: var(--white);
+      border-radius: 50%;
+      box-shadow: 0 9px 22px rgba(0,0,0,.2);
+      font-size: 24px;
+      transition: transform .2s ease;
+      animation: pulse 2.5s infinite;
+    }
+
+    .float-btn:hover { transform: scale(1.08); }
+    .float-call { background: var(--teal); }
+    .float-whatsapp { background: #1aa96b; animation-delay: .5s; }
+    .float-btn::after {
+      position: absolute;
+      right: 68px;
+      padding: 5px 8px;
+      color: var(--ink);
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.12);
+      content: attr(data-label);
+      opacity: 0;
+      pointer-events: none;
+      font-size: 11px;
+      white-space: nowrap;
+      transform: translateX(4px);
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .float-btn:hover::after { opacity: 1; transform: translateX(0); }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 9px 22px rgba(0,0,0,.2), 0 0 0 0 rgba(13,115,117,.24); }
+      50% { box-shadow: 0 9px 22px rgba(0,0,0,.2), 0 0 0 9px rgba(13,115,117,0); }
+    }
+
+    @media (max-width: 850px) {
+      .hero { grid-template-columns: 1fr; padding-top: 45px; }
+      .hero-visual { order: -1; min-height: 290px; }
+      .hero-image { width: 290px; height: 290px; }
+      .hero-visual::before { width: 240px; height: 240px; }
+      .visual-tag { right: calc(50% - 155px); bottom: 2%; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-wrap { grid-template-columns: 1fr; }
+      .features-copy { max-width: 540px; margin: auto; }
+    }
+
+    @media (max-width: 560px) {
+      .page { width: min(100% - 20px, 480px); }
+      .topbar { padding-top: 15px; }
+      .top-link { font-size: 11px; }
+      .hero { min-height: auto; margin-top: 10px; padding: 30px 18px 28px; border-radius: 27px; }
+      h1 { font-size: 38px; letter-spacing: -1px; }
+      .hero-copy > p { font-size: 14px; }
+      .hero-visual { min-height: 260px; }
+      .hero-image { width: 250px; height: 250px; }
+      .visual-tag { right: calc(50% - 137px); padding: 8px 10px; font-size: 10px; }
+      .trust-row { margin-bottom: 55px; gap: 6px; }
+      .trust-card { padding: 13px 5px; }
+      .trust-card strong { font-size: 18px; }
+      .trust-card span { font-size: 10px; }
+      .section { margin-bottom: 58px; }
+      .services-grid, .reviews-grid { grid-template-columns: 1fr 1fr; gap: 9px; }
+      .service-card { padding: 20px 9px 17px; }
+      .service-card h3 { font-size: 13px; }
+      .service-card p { font-size: 10px; }
+      .icon { width: 48px; height: 48px; font-size: 22px; }
+      .features-wrap { gap: 20px; padding: 24px 13px; }
+      .feature-list { gap: 8px; }
+      .feature-list li { gap: 6px; padding: 10px 7px; font-size: 10px; }
+      .feature-list li::before { width: 18px; height: 18px; font-size: 10px; }
+      .review-card { padding: 15px 12px; }
+      .review-card p { min-height: 122px; font-size: 11px; }
+      .reviewer { font-size: 10px; }
+      .avatar { width: 31px; height: 31px; }
+      .cta { padding: 33px 15px; border-radius: 25px; }
+      .cta h2 { font-size: 25px; }
+      .float-btn { width: 50px; height: 50px; font-size: 20px; }
+      .floating-actions { left: 11px; bottom: 12px; }
+      .float-btn::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="#الرئيسية" aria-label="نقاء جدة - الرئيسية">
+        <span class="brand-mark">✦</span>
+        <span class="brand-text">نقاء جدة<small>للتنظيف والعناية</small></span>
+      </a>
+      <a class="top-link" href="tel:0562062977"><span>☎</span> اتصل الآن</a>
+    </header>
+
+    <main>
+      <section class="hero" id="الرئيسية">
+        <div class="hero-copy">
+          <p class="eyebrow">نظافة تليق بمكانك</p>
+          <h1>بيتك أنظف،<br><span style="color: var(--gold);">راحتك أكبر</span></h1>
+          <p>خدمات تنظيف احترافية للمنازل والمجالس والمكيفات والخزانات في جدة، بفريق يهتم بكل تفصيلة.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:0562062977">☎ اتصل للحجز</a>
+            <a class="btn btn-outline" href="#الخدمات">اكتشف خدماتنا ↓</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="فريق تنظيف محترف">
+          <img class="hero-image" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=85" alt="فريق تنظيف محترف">
+          <div class="visual-tag"><b>✓</b> نظافة مضمونة في جدة</div>
+        </div>
+      </section>
+
+      <div class="trust-row" aria-label="مميزات الخدمة">
+        <div class="trust-card"><strong>+500</strong><span>عميل سعيد</span></div>
+        <div class="trust-card"><strong>4.9/5</strong><span>تقييم العملاء</span></div>
+        <div class="trust-card"><strong>24/7</strong><span>لخدمتكم</span></div>
+      </div>
+
+      <section class="section" id="الخدمات">
+        <p class="section-kicker">خدماتنا</p>
+        <h2>نظافة كاملة، من مكان واحد</h2>
+        <p class="section-intro">نصل إليك في جدة بمعدات احترافية وفريق مدرّب ليمنح منزلك إحساس النظافة من أول زيارة.</p>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="icon">⌂</div>
+            <h3>تنظيف المنازل</h3>
+            <p>تنظيف شامل للغرف والمطابخ والحمامات.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">✦</div>
+            <h3>تنظيف المجالس</h3>
+            <p>عناية دقيقة بالمجالس والكنب والستائر.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">❄</div>
+            <h3>تنظيف المكيفات</h3>
+            <p>تنظيف الفلاتر والوحدات لتحسين الأداء.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">▣</div>
+            <h3>تنظيف الخزانات</h3>
+            <p>تنظيف وتعقيم آمن للخزانات بكل احترافية.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="عن-نحن">
+        <div class="features-wrap">
+          <div class="features-copy">
+            <p class="section-kicker">لماذا نقاء جدة؟</p>
+            <h2>نشتغل بضمير… والنتيجة تبان</h2>
+            <p>هدفنا ليس التنظيف فقط، بل أن نترك المكان أهدأ وأجمل وأكثر راحة لك ولعائلتك.</p>
+          </div>
+          <ul class="feature-list">
+            <li>فريق مدرّب ومحترف</li>
+            <li>مواد تنظيف آمنة</li>
+            <li>مواعيد دقيقة</li>
+            <li>أسعار مناسبة</li>
+            <li>خدمة داخل جدة</li>
+            <li>رضاك أولويتنا</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="التقييمات">
+        <p class="section-kicker">قالوا عنّا</p>
+        <h2>تجارب تخلّي العميل يرجع</h2>
+        <p class="section-intro">آراء عملائنا بعد تجربة خدمات التنظيف في منازلهم ومجالسهم.</p>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>شغل مرتب جدًا وسرعة في الحضور. المجلس رجع كأنه جديد والفريق محترم ومتعاون.</p>
+            <div class="reviewer"><span class="avatar">م</span> منى — جدة</div>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>طلبت تنظيف المكيفات والخزانات والنتيجة ممتازة. تعامل راقٍ وسعر مناسب جدًا.</p>
+            <div class="reviewer"><span class="avatar">أ</span> أحمد — جدة</div>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>أفضل تجربة تنظيف للبيت جربتها. اهتمام بالتفاصيل والتزام كامل بالموعد، أنصح بهم.</p>
+            <div class="reviewer"><span class="avatar">س</span> سارة — جدة</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta" id="تواصل">
+        <h2>جاهز تشوف الفرق؟</h2>
+        <p>اتصل بنا الآن واحجز موعد التنظيف المناسب لك في جدة.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:0562062977">☎ 0562062977</a>
+          <a class="btn btn-light" href="https://wa.me/966562062977" target="_blank" rel="noopener">واتساب ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> نقاء جدة — جميع الحقوق محفوظة</div>
+      <div class="designer">تم التصميم بواسطة <a href="https://wa.me/201029095046" target="_blank" rel="noopener">م. نجوى إبراهيم</a></div>
+    </footer>
+  </div>
+
+  <div class="floating-actions" aria-label="خيارات التواصل السريع">
+    <a class="float-btn float-call" href="tel:0562062977" data-label="اتصال مباشر" aria-label="اتصال مباشر">☎</a>
+    <a class="float-btn float-whatsapp" href="https://wa.me/966562062977" target="_blank" rel="noopener" data-label="واتساب" aria-label="واتساب">◔</a>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
